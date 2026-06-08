@@ -6,11 +6,13 @@ import { Instrument_Serif } from "next/font/google";
 const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400" });
 
 interface CommentFormProps {
+  slug: string;
   onCommentAdded: (comment: Comment) => void;
 }
 
 export interface Comment {
   id: string;
+  post_id: string;
   nombre: string;
   apellido: string;
   asunto: string;
@@ -21,7 +23,7 @@ export interface Comment {
 const inputClass =
   "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/20 focus:outline-none focus:border-amber-400/60 focus:bg-white/8 transition";
 
-export function CommentForm({ onCommentAdded }: CommentFormProps) {
+export function CommentForm({ slug, onCommentAdded }: CommentFormProps) {
   const [form, setForm] = useState({
     nombre: "",
     apellido: "",
@@ -48,7 +50,10 @@ export function CommentForm({ onCommentAdded }: CommentFormProps) {
       const res = await fetch("/api/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          post_id: slug,
+        }),
       });
 
       const data = await res.json();

@@ -84,7 +84,7 @@ const Hero = () => {
           " text-[4em] md:text-[8em] text-start leading-[1.1] tracking-[-0.05em] sm:mx-auto md:mx-4 overflow-visible sm:text-wrap"
         }
       >
-        COMPRENSION DE TEXTOS
+        COMPRENSIÓN DE TEXTOS
       </h1>
       <hr className="w-full hrw" />
       <div className="flex justify-center gap-3">

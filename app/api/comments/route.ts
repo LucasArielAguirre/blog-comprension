@@ -6,11 +6,21 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!,
 );
 
-// GET /api/comments
-export async function GET() {
+// GET /api/comments?post_id=secundaria-a-universidad
+export async function GET(req: NextRequest) {
+  const postId = req.nextUrl.searchParams.get("post_id");
+
+  if (!postId) {
+    return NextResponse.json(
+      { error: "post_id es obligatorio" },
+      { status: 400 },
+    );
+  }
+
   const { data, error } = await supabase
     .from("comments")
     .select("*")
+    .eq("post_id", postId)
     .order("created_at", { ascending: false });
 
   if (error) {
@@ -23,9 +33,10 @@ export async function GET() {
 // POST /api/comments
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { nombre, apellido, asunto, mensaje } = body;
 
-  if (!nombre || !apellido || !asunto || !mensaje) {
+  const { post_id, nombre, apellido, asunto, mensaje } = body;
+
+  if (!post_id || !nombre || !apellido || !asunto || !mensaje) {
     return NextResponse.json(
       { error: "Todos los campos son obligatorios." },
       { status: 400 },
@@ -34,7 +45,13 @@ export async function POST(req: NextRequest) {
 
   const { data, error } = await supabase
     .from("comments")
-    .insert({ nombre, apellido, asunto, mensaje })
+    .insert({
+      post_id,
+      nombre,
+      apellido,
+      asunto,
+      mensaje,
+    })
     .select()
     .single();
 
