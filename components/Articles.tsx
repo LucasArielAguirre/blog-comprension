@@ -31,6 +31,7 @@ const ArticleCard = ({
         <Image
           src={image}
           alt={title}
+          loading="eager"
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
