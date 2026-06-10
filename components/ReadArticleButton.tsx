@@ -9,10 +9,25 @@ interface ReadArticleButtonProps {
 export default function ReadArticleButton({ text }: ReadArticleButtonProps) {
   const [reading, setReading] = useState(false);
 
+  const cleanMarkdown = (text: string) => {
+    return text
+      .replace(/^#{1,6}\s+/gm, "") // títulos
+      .replace(/\*\*(.*?)\*\*/g, "$1") // negrita
+      .replace(/\*(.*?)\*/g, "$1") // cursiva
+      .replace(/`(.*?)`/g, "$1") // código inline
+      .replace(/!\[.*?\]\(.*?\)/g, "") // imágenes
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // enlaces
+      .replace(/^\s*[-*+]\s+/gm, "") // listas
+      .replace(/\n{2,}/g, ". ") // párrafos
+      .trim();
+  };
+
   const startReading = () => {
     speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    const cleanText = cleanMarkdown(text);
+
+    const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = "es-AR";
 
     utterance.onend = () => setReading(false);

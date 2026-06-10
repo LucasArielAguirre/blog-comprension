@@ -1,5 +1,5 @@
 ---
-title: "De la secundaria a la universidad: lo que nos costó a los dos"
+title: "De la secundaria a la universidad: un gran cambio"
 tag: "Educación · Experiencia personal"
 image: "/1.avif"
 readTime: "6 min de lectura"

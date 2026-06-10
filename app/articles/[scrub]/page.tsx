@@ -7,6 +7,7 @@ import ReadArticleButton from "@/components/ReadArticleButton";
 
 import { CommentsSection } from "@/components/CommentsSection";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import Footer from "@/components/Footer";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const instrumentSerif = Instrument_Serif({
