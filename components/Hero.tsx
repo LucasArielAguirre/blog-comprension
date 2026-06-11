@@ -133,7 +133,7 @@ const ScrollTriggerWord = () => (
 );
 const ScrollBasedWord = () => (
   <span className="whitespace-nowrap relative">
-    <Highlighted2 className="absolute bottom-0 left-[-0.3em] w-[4em] h-[1.4em]" />
+    <Highlighted2 className="absolute -bottom-2 left-[-0.3em] w-[4em] h-[1.4em]" />
     TEXTOS
   </span>
 );
