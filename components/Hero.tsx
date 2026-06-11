@@ -89,21 +89,21 @@ const Hero = () => {
       <hr className="w-full hrw" />
       <div className="flex justify-center gap-3">
         <Image
-          src="/1.avif"
+          src="/img1.webp"
           alt="Hero Image"
           width={300}
           height={200}
           className="rounded-lg shadow-lg image1  sm:hidden md:block -rotate-2"
         />
         <Image
-          src="/2.avif"
+          src="/img2.avif"
           alt="Hero Image"
           width={300}
           height={200}
           className="rounded-lg shadow-lg image1 md:block"
         />
         <Image
-          src="/1.avif"
+          src="/4.webp"
           alt="Hero Image"
           width={300}
           height={200}

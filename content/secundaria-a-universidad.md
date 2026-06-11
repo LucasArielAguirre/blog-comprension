@@ -1,7 +1,7 @@
 ---
 title: "De la secundaria a la universidad: un gran cambio"
 tag: "Educación · Experiencia personal"
-image: "/1.avif"
+image: "/img3.webp"
 readTime: "6 min de lectura"
 slug: "secundaria-a-universidad"
 ---

@@ -60,9 +60,7 @@ export default async function ArticlePage({
           <Link
             href="./"
             className="rounded bg-black text-white shadow-amber-400 w-10 h-10 z-10"
-          >
-            - Volver a artículos
-          </Link>
+          ></Link>
         </span>
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/40 to-transparent" />

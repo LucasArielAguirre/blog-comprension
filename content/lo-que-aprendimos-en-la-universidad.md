@@ -1,7 +1,7 @@
 ---
 title: "Tres años después: lo que aprendimos de la universidad"
 tag: "Educación · Experiencia personal"
-image: "/2.avif"
+image: "/img2.avif"
 readTime: "6 min de lectura"
 slug: "lo-que-aprendimos-en-la-universidad"
 ---

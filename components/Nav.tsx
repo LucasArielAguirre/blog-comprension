@@ -14,17 +14,12 @@ const Nav = () => {
         <li
           className={`${playfair.className} text-xl font-extralight hover:border-b hover:border-black`}
         >
-          <Link href="/">Home</Link>
+          <Link href="/">Inicio</Link>
         </li>
         <li
           className={`${playfair.className} text-xl font-extralight hover:border-b hover:border-black`}
         >
-          <Link href="/about">About</Link>
-        </li>
-        <li
-          className={`${playfair.className} text-xl font-extralight hover:border-b hover:border-white hover:bg-amber-200`}
-        >
-          <Link href="/contact">Contact</Link>
+          <Link href="/about">Sobre nosotros</Link>
         </li>
       </ul>
     </nav>
