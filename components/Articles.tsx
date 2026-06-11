@@ -1,7 +1,6 @@
 import React from "react";
 import { Instrument_Serif, Playfair_Display } from "next/font/google";
 import Image from "next/image";
-
 import { getAllPosts } from "@/lib/posts";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });

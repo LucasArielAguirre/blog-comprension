@@ -1,10 +1,8 @@
-import { Instrument_Serif } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
-const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400" });
 
 const Nav = () => {
   return (
