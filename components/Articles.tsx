@@ -25,7 +25,10 @@ const ArticleCard = ({
   readTime,
 }: ArticleCardProps) => {
   return (
-    <a className="w-full h-full" href={`/articles/${slug}`}>
+    <a
+      className="flex flex-wrap justify-center items-center gap-6 w-full md:w-auto"
+      href={`/articles/${slug}`}
+    >
       <div className="group relative w-[340px] h-[460px] rounded-2xl overflow-hidden cursor-pointer">
         <Image
           src={image}

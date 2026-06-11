@@ -103,7 +103,7 @@ const Hero = () => {
           className="rounded-lg shadow-lg image1  sm:hidden md:block -rotate-2"
         />
         <Image
-          src="/img2.avif"
+          src="/4.webp"
           priority
           alt="lo que aprendimos en la universidad"
           width={300}
@@ -111,12 +111,12 @@ const Hero = () => {
           className="rounded-lg shadow-lg image1 md:block"
         />
         <Image
-          src="/4.webp"
+          src="/img2.avif"
           priority
           alt="detras del proyecto"
           width={300}
           height={200}
-          className="rounded-lg shadow-lg image1 sm:hidden md:block rotate-2"
+          className="w-[300px] h-[200px] rounded-lg shadow-lg image1 sm:hidden md:block rotate-2"
         />
       </div>
     </main>
